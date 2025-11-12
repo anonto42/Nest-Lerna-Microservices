@@ -1,0 +1,26 @@
+{
+  "name": "nestlerna",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/anonto42/Nest-Lerna-Microservices.git",
+  "author": "Sohidul Islam Ananto <anontom90@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "lerna run dev --parallel",
+    "build": "lerna run build",
+    "test": "lerna run test",
+    "docker:up": "docker-compose up -d",
+    "docker:down": "docker-compose down"
+  },
+  "devDependencies": {
+    "lerna": "^6.6.2",
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "@nestjs/cli": "^11.0.10"
+  }
+}
